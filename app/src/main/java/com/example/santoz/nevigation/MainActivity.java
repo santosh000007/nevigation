@@ -43,18 +43,19 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         //if you want to update the items at a later time it is recommended to keep it in a variable
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("home");
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("settings");
-
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Home").withIcon(getResources().getDrawable(R.drawable.home));
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("Settings").withIcon(getResources().getDrawable(R.drawable.setting));
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName("Apps & games").withIcon(getResources().getDrawable(R.drawable.apps));
+        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName("Movies").withIcon(getResources().getDrawable(R.drawable.images));
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Add account").withIcon(getResources().getDrawable(R.drawable.account));
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(6).withName("Log Out").withIcon(getResources().getDrawable(R.drawable.logout));
 //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
                 .withAccountHeader(headerResult)
                 .withToolbar(toolbar)
                 .addDrawerItems(
-                        item1,
-
-                        item2
+                        item1,item2,item3,item4,item5,item6
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
